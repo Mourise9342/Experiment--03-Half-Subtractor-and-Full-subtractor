@@ -35,20 +35,65 @@ Write the detailed procedure here
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Mourise jane s 
+RegisterNumber: 212222230085 
+/*
+
+//Half Subtractor Program:
+
+module HalfSubtractor(A,B,Difference,Borrow);
+input A,B;
+output Difference,Borrow;
+assign Difference = (A ^ B);
+assign Borrow = (~A & B);
+endmodule
+
+//Full Subtractor Program:
+
+module FullSubtractor(A,B,C,Difference,Borrow);
+input A,B,C;
+output Difference,Borrow;
+assign Difference = (~A &(B ^ C) | (B & C));
+assign Borrow = ( A^B^C);
+endmodule
 */
 
 ## Output:
 
 ## Truthtable
+### Half subractor:
+![233019093-6afe4766-bf66-46c2-98eb-738ef543058a](https://user-images.githubusercontent.com/120081893/233124958-323c013b-a48a-43f1-bda8-41f50777c100.png)
+
+### Full subractor:
+![233019115-34b8e1cf-216b-49eb-9231-46ab34090dd8](https://user-images.githubusercontent.com/120081893/233125213-0575b97d-e45e-4c70-84bc-c574470e5569.png)
+
+### Logic Daigram
+## Half subracor:
+![full subractor](https://user-images.githubusercontent.com/120081893/233128746-cfb9229c-0cce-4705-9337-54f401ad7077.png)
+## Full subractor:
+![subractor](https://user-images.githubusercontent.com/120081893/233127774-c62d13eb-a9c5-4ba8-a3f4-1d0e1f2ecd06.png)
+
+
 
 
 
 ##  RTL realization
+# Half subractor:
+![Screenshot 54](https://user-images.githubusercontent.com/120081893/233131534-1fb41182-ecbb-49f3-b2f1-793d703940ef.png)
+
+## Full subractor:
+![Screenshot 55](https://user-images.githubusercontent.com/120081893/233131699-696ed7af-a65e-461b-b258-ff2aff6a138c.png)
 
 
 ## Timing diagram 
+# Half subractor:
+![Screenshot 39](https://user-images.githubusercontent.com/120081893/233137220-27fd3934-d3ac-4a27-915c-bfdab984471c.png)
+
+# Full subractor:
+![Screenshot 40](https://user-images.githubusercontent.com/120081893/233137490-d3b0653f-f7b3-4891-8141-db6140af53c9.png)
+
+
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
